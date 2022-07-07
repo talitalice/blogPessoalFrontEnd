@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { UserLogin } from '../model/UserLogin';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class EntrarComponent implements OnInit {
 
-  userLogin: UserLogin = new UserLogin()
+  usuarioLogin: UsuarioLogin = new UsuarioLogin()
 
   constructor(
     private auth: AuthService,
@@ -23,13 +23,13 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar(){
-    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
-        this.userLogin = resp
+    this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin)=>{
+        this.usuarioLogin = resp
 
-       environment.token = this.userLogin.token
-       environment.nome = this.userLogin.nome
-       environment.foto = this.userLogin.foto
-       environment.id = this.userLogin.id
+       environment.token = this.usuarioLogin.token
+       environment.nome = this.usuarioLogin.nome
+       environment.foto = this.usuarioLogin.foto
+       environment.id = this.usuarioLogin.id
 
         this.router.navigate(['/inicio'])
     }, erro =>{

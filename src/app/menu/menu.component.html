@@ -8,13 +8,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="nav-item active">
-        <img
-          src="https://scontent.fcgh23-1.fna.fbcdn.net/v/t39.30808-6/291348236_5278624058895128_8918473962758795976_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeHfI1lYVqRE1gvKakN60IcePWdeUITl_Hk9Z15QhOX8edJAGvryTOAwFSFuAC80URbWHh6LDjOiuKdMhkcKwijj&_nc_ohc=Jt41pFMXM_MAX_DxK6M&_nc_ht=scontent.fcgh23-1.fna&oh=00_AT9aR4oM_XEKGb5OCrBwclOq59oooLdXwD1F29_sfaRp0A&oe=62C301EE"
+        <img src="{{foto}}"
           alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle">
       </li>
       <li class="nav-item pl-3">
         <p class="m-0 font-weight-bold text-white fs-16 ">
-          Talita A.
+         Olá, {{nome}}
         </p>
       </li>
 
@@ -29,7 +28,7 @@
 
     <ul class="navbar-nav ml-auto d-flex align-items-center">
       <li class="nav-item pl-3">
-        <a class="m-0 font-weight-bold text-white fs-15 ">
+        <a (click)="sair()" class="m-0 font-weight-bold text-white fs-15 ">
           Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
         </a>
       </li>
