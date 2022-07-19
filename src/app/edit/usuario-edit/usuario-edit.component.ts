@@ -49,7 +49,7 @@ export class UsuarioEditComponent implements OnInit {
       alert('As senhas estão incorretas.')
 
     }else {
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario)=> {
+      this.authService.atualizar(this.usuario).subscribe((resp: Usuario)=> {
         this.usuario = resp
         this.router.navigate(['/inicio'])
         alert('Usuário atualizado com sucesso! Faça o login novamente')

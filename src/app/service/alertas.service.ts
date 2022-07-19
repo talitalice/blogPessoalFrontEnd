@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BsModalService } from 'ngx-bootstrap/modal'
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+
 import { AlertasComponent } from '../alertas/alertas.component';
 import { TemaEditComponent } from '../edit/tema-edit/tema-edit.component';
 
